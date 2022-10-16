@@ -127,11 +127,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "ffufrewrite"
+name = "ffuf-wrapper"
 version = "0.1.0"
 dependencies = [
  "clap",
- "http",
  "reqwest",
  "tokio",
 ]

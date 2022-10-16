@@ -47,7 +47,7 @@ async fn run(output: Vec<&str>, cfg: (i32, Option<&String>, &str)) -> io::Result
             format!("")
         };
 
-        let final_args = if jwt.len() > 1 {
+        let final_args = if !jwt.is_empty() {
             let header = vec!["-H", jwt.as_str()];
             let output = output.clone();
             let wordlist = vec!["-w", "-"];
