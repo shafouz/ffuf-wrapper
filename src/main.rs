@@ -1,6 +1,6 @@
-mod lab;
 use std::{fs::{File, read_to_string}, io::{BufReader, BufRead, Write, Read, self}, error::Error, process::Stdio, time::{SystemTime, UNIX_EPOCH}, env};
 use clap::{command, arg, ArgGroup, Command, Arg};
+mod lab;
 
 fn main(){
     let matches = cli().get_matches();
@@ -165,7 +165,7 @@ fn cli() -> Command {
             .allow_hyphen_values(true)
         )
         .arg(arg!(--jwt <VALUE> "value of the url with the jwt token"))
-        .after_help("--jwt option neds a file called request.txt with the cookies to fetch it")
+        .after_help("--jwt option needs a file called request.txt with the cookies to fetch it")
 }
 
 fn get_output_file() -> Vec<String> {
